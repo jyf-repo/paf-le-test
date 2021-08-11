@@ -14,6 +14,11 @@
         {% endblock %}
     </head>
     <body>
+    <nav>
+        <a href="{{ path('app_home') }}">Accueil</a>
+        <a href="{{ path('app_page1') }}">Page 1</a>
+        <a href="{{ path('app_page2') }}">Page 2</a>
+    </nav>
         {% block body %}{% endblock %}
     </body>
 </html>
