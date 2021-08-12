@@ -1,8 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Paf le test{% endblock %}
 
 {% block body %}
-    <h1 style="text-align: center">Et Paf le Test</h1>
-    <p>qui fonctionne bien</p>
+    <h1 style="text-align: center">Et Paf!!! le Test</h1>
+
+    <p>D'ailleurs, un test qui fonctionne bien.</p>
+
+    <p>remplissons ce formulaire d'ingredients afin de voir si la base de donnée fonctionne également: </p>
+{{ form_start(form) }}
+    {{ form_widget(form.common_name,{'attr': {'placeholder': 'Nom commun' } }) }}<br>
+    {{ form_widget(form.botanic_name,{'attr': {'placeholder': 'Nom botanique' } }) }}<br>
+    {{ form_widget(form.family,{'attr': {'placeholder': 'Famille' } }) }}<br>
+    {{ form_widget(form.use_part,{'attr': {'placeholder': 'Partie utilisée' } }) }}<br>
+    {{ form_widget(form.under_group,{'attr': {'placeholder': 'Sous groupe' } }) }}<br>
+    <button type="submit" class="btn btn-outline-primary">
+        Enregistrer
+    </button>
+{{ form_end(form) }}
+
 {% endblock %}

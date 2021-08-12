@@ -1,8 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PageController!{% endblock %}
+{% block title %}Hello Page 1{% endblock %}
 
 {% block body %}
 <h1 style="text-align: center">Page 1</h1>
-    <p> Bim boum test page</p>
+    <h2>Codex Alimentarius</h2>
+    {% for ingredient in ingredients %}
+        <h3>{{ ingredient.commonName }}</h3>
+        {{ ingredient.botanicName }} | {{ ingredient.family }} | {{ ingredient.underGroup }} | {{ ingredient.usePart }}<br><br>
+    {% endfor %}
+    <p> " Bim Boum!!! " c'est une test page</p>
 {% endblock %}

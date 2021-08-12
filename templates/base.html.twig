@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
@@ -16,8 +18,8 @@
     <body>
     <nav>
         <a href="{{ path('app_home') }}">Accueil</a>
-        <a href="{{ path('app_page1') }}">Page 1</a>
-        <a href="{{ path('app_page2') }}">Page 2</a>
+        <a href="{{ path('app_page1') }}"> | Page 1</a>
+        <a href="{{ path('app_page2') }}"> | Page 2</a>
     </nav>
         {% block body %}{% endblock %}
     </body>
